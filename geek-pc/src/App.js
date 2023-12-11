@@ -1,10 +1,19 @@
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+import Login from './pages/Login';
+import Layout from './pages/Layout';
 
 function App () {
   return (
-    <div className="App">
-      父元素.appendChild(需要添加的元素)
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Layout />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+
   );
 }
 
